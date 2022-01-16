@@ -105,7 +105,7 @@ public class StockOpname extends AppCompatActivity {
                             public void run() {
                                 //Toast.makeText(StockOpname.this, result.getText(), Toast.LENGTH_SHORT).show();
                                 txt_barcode.setText(result.getText());
-                                }
+                            }
                         });
                     }
                 });
@@ -130,37 +130,45 @@ public class StockOpname extends AppCompatActivity {
                             for (int j = 0; j < listBarcodeBarang.length; j++) {
                                 if (listBarcodeBarang[j].equalsIgnoreCase(barcode)) {
                                     barangada = 1;
+                                    break;
                                 }
                             }
 
                         }
 
                         if(barangada!=1){
-                                     alertDialog.dismiss();
-                                    AlertDialog.Builder builder = new AlertDialog.Builder(StockOpname.this);
-                                    builder.setMessage("BARANG TIDAK TERDAFTAR DI SISTEM")
-                                            .setNegativeButton("Kembali", null)
-                                            .create()
-                                            .show();
+                            alertDialog.dismiss();
+                            AlertDialog.Builder builder = new AlertDialog.Builder(StockOpname.this);
+                            builder.setMessage("BARANG TIDAK TERDAFTAR DI SISTEM")
+                                    .setNegativeButton("Kembali", null)
+                                    .create()
+                                    .show();
 
-                            }
+                        }
 
                         if (barangada == 1) {
+                            if (listBarcode.length!=0){
                                 for (int i = 0; i < listBarcode.length; i++) {
                                     if (listBarcode[i].equalsIgnoreCase(barcode)) {
                                         alertDialog.dismiss();
+                                        clear();
                                         AlertDialog.Builder builder = new AlertDialog.Builder(StockOpname.this);
                                         builder.setMessage("BARANG SUDAH DI AUDIT")
                                                 .setNegativeButton("Kembali", null)
                                                 .create()
                                                 .show();
+                                        break;
                                     } else {
                                         getBarangwithBarcode(barcode);
                                         alertDialog.dismiss();
                                     }
                                 }
+                            } else {
+                                getBarangwithBarcode(barcode);
+                                alertDialog.dismiss();
                             }
                         }
+                    }
 
                 });
 
@@ -218,6 +226,13 @@ public class StockOpname extends AppCompatActivity {
         et_item_desc.setText(barangModel.getItem_desc());
         et_stock_qty.setText(String.valueOf(barangModel.getStock_qty()));
         et_item_barcode.setText(barangModel.getItem_barcode());
+    }
+
+    public void clear(){
+        et_item_cd.setText("");
+        et_item_desc.setText("");
+        et_stock_qty.setText("");
+        et_item_barcode.setText("");
     }
 
     public void getdataBarcodediSistem(){

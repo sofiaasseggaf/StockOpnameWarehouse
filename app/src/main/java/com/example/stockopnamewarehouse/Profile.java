@@ -7,9 +7,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.stockopnamewarehouse.helper.DataHelper;
@@ -20,6 +23,7 @@ public class Profile extends AppCompatActivity {
     EditText et_nama, et_username, et_password, et_jabatan;
     ImageButton btn_logout, btn_simpan;
     DataHelper dbHelper;
+    TextView seepw;
     int role;
 
     @Override
@@ -33,6 +37,7 @@ public class Profile extends AppCompatActivity {
         et_jabatan = findViewById(R.id.et_jabatan);
         btn_logout = findViewById(R.id.btn_logout);
         btn_simpan = findViewById(R.id.btn_simpan);
+        seepw = findViewById(R.id.seepw);
         role = Integer.valueOf(PreferenceUtils.getIdRole(getApplicationContext()));
 
       setDataProfile();
@@ -49,6 +54,18 @@ public class Profile extends AppCompatActivity {
                 showPopupSimpan();
             }
         });
+        seepw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (seepw.getText().toString().equalsIgnoreCase("show password")){
+                    et_password.setTransformationMethod(null);
+                    seepw.setText("hide password");
+                } else if(seepw.getText().toString().equalsIgnoreCase("hide password")){
+                    et_password.setTransformationMethod(new PasswordTransformationMethod());
+                    seepw.setText("show password");
+                }
+            }
+        });
 
     }
 
@@ -56,6 +73,7 @@ public class Profile extends AppCompatActivity {
         et_nama.setText(PreferenceUtils.getNama(getApplicationContext()));
         et_username.setText(PreferenceUtils.getUsername(getApplicationContext()));
         et_password.setText(PreferenceUtils.getPassword(getApplicationContext()));
+        et_password.setTransformationMethod(new PasswordTransformationMethod());
         String a = PreferenceUtils.getIdRole(getApplicationContext());
         if (a.equalsIgnoreCase("1")) {
             et_jabatan.setText("Petugas Inventori");
@@ -68,7 +86,6 @@ public class Profile extends AppCompatActivity {
 
     public void saveDataProfileBaru(){
         PreferenceUtils.saveNama(et_nama.getText().toString(), getApplicationContext());
-        PreferenceUtils.saveUsername(et_username.getText().toString(), getApplicationContext());
         PreferenceUtils.savePassword(et_password.getText().toString(),getApplicationContext());
         setDataProfile();
     }
@@ -121,7 +138,7 @@ public class Profile extends AppCompatActivity {
         dbHelper = new DataHelper(this);
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         //id_user, nama, username, password, id_role
-        db.execSQL("update user set nama='"+et_nama.getText().toString()+"', username='"+et_username.getText().toString()+"', password='"+et_password.getText().toString()+"' " +
+        db.execSQL("update user set nama='"+et_nama.getText().toString()+"', password='"+et_password.getText().toString()+"' " +
                 "where id_user='"+ PreferenceUtils.getIdUser(getApplicationContext()) +"'");
         Toast.makeText(getApplicationContext(), "Berhasil Simpan Data Profile", Toast.LENGTH_SHORT).show();
         saveDataProfileBaru();

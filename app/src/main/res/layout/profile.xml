@@ -100,21 +100,28 @@
             android:textColor="@color/white"
             android:layout_marginTop="15dp"/>
 
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/rect_edittextprofile"
-            android:fontFamily="@font/montserrat_bold"
-            android:textSize="16sp"
-            android:paddingLeft="10dp"
-            android:editable="false"
-            android:inputType="textPassword"
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rect_edittextprofile"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="16sp"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"/>
 
-            android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/seepw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="show password"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="3dp"
+                android:clickable="true"/>
 
-        <TextView
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Jabatan"

@@ -43,8 +43,8 @@ public class AdapterLaporan extends  RecyclerView.Adapter<RecyclerView.ViewHolde
         ((Penampung)holder).txt_item_desc.setText(listBarang.get(position).getItem_desc());
         ((Penampung)holder).txt_stock_qty_akhir.setText(String.valueOf(listBarang.get(position).getStock_qty()));
         ((Penampung)holder).txt_stock_qty_gudang.setText(String.valueOf(listBarangGudang.get(position).getStock_qty_gudang()));
-        int i = listBarang.get(position).getStock_qty() - listBarangGudang.get(position).getStock_qty_gudang();
-        if (i<0){
+        int i = listBarangGudang.get(position).getStock_qty_gudang() - listBarang.get(position).getStock_qty();
+        if (i>=0){
             ((Penampung)holder).txt_stock_qty_selisih.setTextColor(R.color.redfont);
             ((Penampung)holder).txt_stock_qty_selisih.setText(String.valueOf(i));
         } else {
