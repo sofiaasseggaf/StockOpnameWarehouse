@@ -1,0 +1,167 @@
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:background="@drawable/rect_list_laporan"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_tgl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="01 Desember 2021"
+        android:textSize="10sp"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="#303030"
+        android:textAlignment="textEnd"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="7">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item CD"
+            android:textColor="#303030"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_weight="2"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/txt_item_cd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="B123"
+            android:textColor="#303030"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"
+            android:layout_weight="5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="7">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item Desc"
+            android:textColor="#303030"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_weight="2"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/txt_item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buku Tulis"
+            android:textColor="#303030"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"
+            android:layout_weight="5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="7">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stock Qty System"
+            android:textColor="#303030"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_weight="2"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/txt_stock_qty_akhir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="48"
+            android:textColor="#303030"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"
+            android:layout_weight="5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="7">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stock Qty Actual"
+            android:textColor="#303030"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_weight="2"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/txt_stock_qty_gudang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textColor="#303030"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"
+            android:layout_weight="5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:weightSum="7">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Qty Comparation"
+            android:textColor="#303030"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_weight="2"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/txt_stock_qty_selisih"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="#303030"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"
+            android:layout_weight="5"/>
+    </LinearLayout>
+
+   <!-- <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Keterangan :"
+            android:textColor="#303030"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/txt_ket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Barang Rusak"
+            android:textColor="#303030"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="14sp"/>
+    </LinearLayout>-->
+
+
+</LinearLayout>

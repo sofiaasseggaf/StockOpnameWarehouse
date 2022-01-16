@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="15dp"
+    android:background="@color/white">
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:id="@+id/scanner_view"
+        app:autoFocusButtonColor="@color/white"
+        app:autoFocusButtonVisible="true"
+        app:flashButtonColor="@color/white"
+        app:flashButtonVisible="true"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        app:maskColor="#6C000000"/>
+
+    <TextView
+        android:id="@+id/txt_barcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/scanner_view"
+        android:textSize="18sp"
+        android:layout_marginRight="5dp"
+        android:layout_alignRight="@id/scanner_view"
+        android:textColor="#303030"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginTop="10dp"/>
+
+    <ImageButton
+        android:id="@+id/btn_batal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_barcode"
+        android:layout_alignRight="@id/txt_barcode"
+        android:background="@drawable/btn_simpan"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"/>
+
+</RelativeLayout>

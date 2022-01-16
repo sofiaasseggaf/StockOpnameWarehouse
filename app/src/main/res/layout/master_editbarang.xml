@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    tools:context=".master_inventori.EditBarang">
+
+    <FrameLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_logonama"
+        android:layout_above="@id/ll1"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="25dp"/>
+
+    <ScrollView
+        android:id="@+id/ll1"
+        android:layout_below="@id/top"
+        android:layout_above="@id/ll2"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item CD"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="14sp"
+                android:textColor="#555555"/>
+
+            <EditText
+                android:id="@+id/et_item_cd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#555555"
+                android:fontFamily="@font/montserrat_bold"
+                android:editable="false"
+                android:textSize="16sp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/rect_editbarang_noedit"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Desc"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/et_item_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_editbarang_yesedit"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="16sp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Std Packing"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/et_std_packing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_editbarang_yesedit"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="16sp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stock Quantity"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:textColor="#555555"/>
+
+            <EditText
+                android:id="@+id/et_stock_qty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_editbarang_noedit"
+                android:textColor="#555555"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="16sp"
+                android:editable="false"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Barcode"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:textColor="#555555"/>
+
+            <EditText
+                android:id="@+id/et_item_barcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_editbarang_noedit"
+                android:textColor="#555555"
+                android:editable="false"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="16sp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_simpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_simpan"
+                android:layout_marginRight="15dp"/>
+
+            <ImageButton
+                android:id="@+id/btn_batal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_batal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="7dp"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btn_barang_masuk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_barangmasuk"
+                android:layout_marginRight="10dp"/>
+
+            <ImageButton
+                android:id="@+id/btn_barang_keluar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_barangkeluar"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_hapus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_hapusbarang"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

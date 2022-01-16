@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginTop="15dp"
+    android:padding="5dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txt_namabarang"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:text="Barang 1"
+        android:layout_toLeftOf="@id/imgview"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/imgview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_right"
+        android:layout_marginTop="2dp"
+        android:layout_alignParentRight="true"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/line"
+        android:layout_below="@id/txt_namabarang"
+        android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>

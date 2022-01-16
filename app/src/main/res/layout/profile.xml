@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Profile">
+
+    <FrameLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_logonama"
+        android:layout_above="@id/user"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi, User"
+        android:fontFamily="@font/comfortaa_regular"
+        android:textSize="2sp"
+        android:textColor="#ffffff"
+        android:layout_below="@id/top"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user"
+        android:background="@drawable/rect_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="40dp"/>
+
+        <EditText
+            android:id="@+id/et_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rect_edittextprofile"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rect_edittextprofile"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:editable="false"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:editable="false"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rect_edittextprofile"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:editable="false"
+            android:inputType="textPassword"
+
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jabatan"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/et_jabatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rect_edittextprofile"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:editable="false"
+            android:clickable="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/btn_simpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_simpan"
+                android:layout_marginRight="20dp"/>
+            <ImageButton
+                android:id="@+id/btn_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_logout"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
